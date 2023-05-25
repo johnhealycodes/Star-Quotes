@@ -4,6 +4,10 @@ const express = require('express')
 const MongoClient = require('mongodb').MongoClient
 const app = express()
 
+MongoClient.connect('mongodb-connection-string', (err, client) => {
+    // ... do something here
+  })
+
 app.listen(3000, function() {
     console.log('listening on 3000')
 })
